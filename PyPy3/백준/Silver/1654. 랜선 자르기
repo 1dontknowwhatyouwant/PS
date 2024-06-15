@@ -2,7 +2,7 @@ k, n = map(int, input().split())
 list1=[0]*k
 for i in range(k):
     list1[i]=int(input())
-standard = max(li)
+standard = max(list1)
 res=0
 def binary(left, right):
     if right<left:
