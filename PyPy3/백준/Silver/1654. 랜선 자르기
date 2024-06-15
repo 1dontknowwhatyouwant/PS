@@ -1,0 +1,22 @@
+k, n = map(int, input().split())
+list1=[0]*k
+for i in range(k):
+    list1[i]=int(input())
+standard = max(li)
+res=0
+def binary(left, right):
+    if right<left:
+        return
+    global n
+    global res
+    mid=(left+right)//2
+    temp = 0
+    for i in list1:
+        temp += i//mid
+    if temp>=n:
+        res=mid   
+        binary(mid+1, right)
+    else:
+        binary(left, mid-1)
+binary(0, standard*2)
+print(res)
