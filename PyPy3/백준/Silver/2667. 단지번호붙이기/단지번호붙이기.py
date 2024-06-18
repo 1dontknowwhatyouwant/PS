@@ -8,9 +8,9 @@ def bfs(start1, start2):
     count = 1
 
     while queue:
-        current1, current2 = queue.popleft()
+        currenti, currentj = queue.popleft()
         for xyi, xyj in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
-            next_i, next_j = current1 + xyi, current2 + xyj
+            next_i, next_j = currenti + xyi, currentj + xyj
             if 0 <= next_i < N and 0 <= next_j < N and not visited[next_i][next_j] and graph[next_i][next_j] == 1:
                 queue.append((next_i, next_j))
                 visited[next_i][next_j] = True
