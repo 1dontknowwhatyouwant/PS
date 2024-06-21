@@ -2,9 +2,9 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 def bfs(start, target):
-    max_pos = 100000
-    visited = [False] * (max_pos + 1)
-    distance = [0] * (max_pos + 1)
+    max1 = 100000
+    visited = [False] * (max1 + 1)
+    distance = [0] * (max1 + 1)
     
     queue = deque([start])
     visited[start] = True
