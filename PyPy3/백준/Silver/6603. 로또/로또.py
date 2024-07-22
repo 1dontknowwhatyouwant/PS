@@ -3,15 +3,15 @@ input = sys.stdin.readline
 
 k = 0
 s = 0
-prn = []
-def dfs(queue,index):
-    if queue == 6:
-        print(*prn)
+queue = []
+def dfs(choose,index):
+    if choose == 6:
+        print(*queue)
         return
     for i in range(index,k):
-        prn.append(s[i])
-        dfs(queue + 1,i + 1)
-        prn.pop()
+        queue.append(s[i])
+        dfs(choose + 1,i + 1)
+        queue.pop()
 
     
 while True:
@@ -22,4 +22,3 @@ while True:
     if k == 0:
         break
     print()
-    
